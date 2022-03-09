@@ -1,0 +1,49 @@
+@keyframes loading{
+  0% , 100% {
+    background-color: rgba(245, 183, 193, 0.947);
+    top: 0;
+    left: 0;
+  }
+  25%{
+    background-color: rgb(247, 210, 165);
+    top: 0;
+    left: calc(100% - 15px);
+  }
+
+  50%{
+    background-color: rgb(169, 223, 122);
+    top: calc(100% - 15px);
+    left: calc(100% - 15px);
+  }
+
+  75%{
+    background-color: rgba(192, 236, 255, 0.92);
+    top: calc(100% - 15px);
+    left: 0;
+  }
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div{
+  width: 30px;
+  height: 30px;
+  position:relative;
+}
+
+span{
+  background-color: rgba(245, 183, 193, 0.947);
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  animation: loading 1.5s infinite;
+}
+span:last-child{
+  animation-delay: .7s;
+}
+
