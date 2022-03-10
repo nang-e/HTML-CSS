@@ -39,6 +39,7 @@ a{
   border: 1px solid rgba(245, 245, 245, 0.947);
   border-radius: 45% 75% 80% 45% / 70% 50% 45% 55%;
   animation: rotation 6s linear infinite;
+  transition:1s;
 }
 
 .container span:nth-child(1){
