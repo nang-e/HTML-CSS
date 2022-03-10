@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
+@keyframes rotation {
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg)
+  }
+}
+
+body {
+  background-color:rgba(28, 28, 25, 0.728);
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 50px;
+}
+
+.container span {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(245, 245, 245, 0.947);
+  border-radius: 45% 75% 80% 45% / 70% 50% 45% 55%;
+  animation: rotation 6s linear infinite;
+}
+
+.container span:nth-child(1){
+  animation-delay: .1s;
+  opacity: .75;
+}
+
+.container span:nth-child(2){
+  animation-delay: .5s;
+  animation-direction: reverse;
+  opacity: .45;
+}
+
+.container span:nth-child(3){
+  animation-delay: 1s;
+  opacity: .25;
+}
+
+.container div {
+  width: 250px;
+  top: 33%;
+  text-align: center;
+  z-index: 0;
+}
+
+.container div a{
+  display:inline-block;
+  margin: 10px;
+  border: 1px solid white;
+  border-radius: 30% / 55% 55% 55% 55%;
+  width: 50px;
+  padding:5px;
+}
+
+.container:nth-child(1):hover span{
+  background-color: palevioletred;
+  border: none;
+}
+.container:nth-child(2):hover span{
+  background-color: yellowgreen;
+  border: none;
+}
+.container:nth-child(3):hover span{
+  background-color: lightskyblue;
+  border: none;
+}
+
