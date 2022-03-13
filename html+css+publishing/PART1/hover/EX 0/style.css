@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap');
+
+body{
+  height: 100vh;
+  font-family: 'Sansita Swashed', cursive;
+  font-size: 15px;
+  color:rgba(69, 117, 207, 0.87);
+  line-height: 0.5em;
+  background-color: rgba(242, 242, 217, 0.897);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+span p:nth-child(1){
+  font-size: 40px;
+  text-shadow: 0 0 1px #000;
+  cursor: pointer;
+}
+span p:nth-child(2){
+  font-size: 15px;
+}
+.hidden{
+  opacity: 0;
+  transition: .5s;
+}
+.container:hover .hidden{
+  display: inline-block;
+  opacity: 1;
+}
+a{
+  color: rgb(68, 64, 64);
+  text-decoration: none;
+  display: block;
+  line-height: 1.5em;
+  font-size: 18px;
+  transition: .3s;
+}
+a:hover{
+  color: rgba(69, 117, 207, 0.87);
+}
