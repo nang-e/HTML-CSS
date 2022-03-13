@@ -5,7 +5,6 @@ body{
   font-family: 'Sansita Swashed', cursive;
   font-size: 15px;
   color:rgba(69, 117, 207, 0.87);
-  line-height: 0.5em;
   background-color: rgba(242, 242, 217, 0.897);
   display: flex;
   align-items: center;
@@ -15,9 +14,12 @@ span p:nth-child(1){
   font-size: 40px;
   text-shadow: 0 0 1px #000;
   cursor: pointer;
+  line-height: 1em;
+  margin: 0;
 }
 span p:nth-child(2){
   font-size: 15px;
+  line-height: 1em;
 }
 .hidden{
   opacity: 0;
