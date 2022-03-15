@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+  color: white;
+  background-color: dodgerblue;
+}
+
+.container {
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  padding-left: 30px;
+}
+.container:hover a{
+  color: rgba(255,255,255,.3);
+}
+.container a{
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 250px;
+  line-height: 1.4em;
+  transition: .3s;
+}
+.container a:hover{
+  color:white;
+}
+.container a::before{
+  content: "\f560";
+  font-family: fontawesome;
+  font-weight: 300;
+  padding-right: 10px;
+  opacity: 0;
+}
+.container a:hover::before{
+  opacity: 1;
+}
