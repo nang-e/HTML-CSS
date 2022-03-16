@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@keyframes bigger-animation {
+  0% {
+    transform: scale(80%);
+  }
+  100% {
+    transform: scale(110%);
+  }
+}
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 13px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: #4c6ef5;
+}
+.items{
+  display: flex;
+  flex-wrap: wrap;
+  width: 900px;
+  justify-content: space-evenly;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.item {
+  width: 250px;
+  height: 200px;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+}
+.front{
+  width: 100%;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0 0 13px #91a7ff;
+  transition: .2s;
+}
+.item:hover .front , .back {
+  background-color: rgba(186, 200, 255, .7);
+}
+.item:hover .front{
+  top:-50%;
+  box-shadow: none;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid rgba(0,0,0,.5);
+}
+.item:hover .front img {
+  animation: bigger-animation .4s linear infinite alternate;
+}
+.item:hover .back{
+  top:50%;
+  opacity: 1;
+  border-radius: 0 0 10px 10px;
+}
+.front h3{
+  margin: 0;
+  padding: 0;
+}
+.back{
+  width: 100%;
+    height: inherit;
+    line-height: 1.5em;
+    position:absolute;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: .2s;
+}
+.back p{
+  margin: 3px 8px;
+}
+.back a{
+  display: inline-block;
+  margin-top: 10px;
+  padding: 3px 8px;
+  background-color: #748ffc;
+  border-radius: 3px;
+}

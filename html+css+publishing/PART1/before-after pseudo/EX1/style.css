@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap');
+@keyframes jelly{
+  0% , 100% {
+      transform: translateY(0);
+  }
+  33.3333% {
+    transform: translateY(-10%);
+  }
+  66.6666% {
+    transform: translateY(10%);
+  }
+}
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.gnb{
+}
+.gnb a{
+  text-decoration: none;
+  color: black;
+}
+.gnb a::before{
+  display:inline-block;
+  width: 25px;
+  height: 25px;
+  content: '06';
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  line-height: 25px;
+  background-color: dodgerblue;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.gnb:hover a::before , .gnb:hover  a::after{
+    animation: jelly .5s  linear infinite;
+}
+.gnb a::after{
+  display:inline-block;
+  content: 'updated 👀';
+  padding: 0px 5px;
+  margin-left: 7px;
+  background-color: red;
+  color: white;
+  border-radius: 3px;
+}
