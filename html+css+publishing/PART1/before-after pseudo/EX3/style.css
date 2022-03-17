@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 13px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: #f1f3f5;
+}
+.gnb {
+  height: 60px;
+  width: 270px;
+  background-color: #e9ecef;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0 0 8px #adb5bd;
+}
+.gnb a{
+  color: black;
+  border: .5px solid rgba(206, 212, 218, .3);
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #f1f3f5;
+  font-size: 20px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.gnb a::before{
+  content:'';
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  bottom:0;
+  left:0;
+  transition: .3s;
+}
+.gnb a:hover::before{
+  height: 100%;
+}
+.gnb a:nth-child(1)::before{
+  background-color: #125688;
+}
+.gnb a:nth-child(2)::before{
+  background-color: #3b5999;
+}
+.gnb a:nth-child(3)::before{
+  background-color: #171515;
+}
+.gnb a:nth-child(4)::before{
+  background-color: #ffdeeb;
+}
+.gnb a:nth-child(5)::before{
+  background-color: #FF0000;
+}
+.gnb a i{
+  transition: .3s;
+}
+.gnb a:hover i{
+  transform: rotateY(180deg);
+  color:white;
+}
