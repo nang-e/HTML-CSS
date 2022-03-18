@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+@keyframes load {
+  0%{
+    width: 0;
+  }
+}
+body {
+  font-family: 'Kanit', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  color: white;
+  background-color: #f8f9fa;
+}
+a{
+  font-size: 13px;
+  color: white;
+  text-decoration: none;
+  cursor: default;
+}
+.container {
+  background-color: #343a40;
+  border-radius: 5px;
+  box-shadow: 0 0 15px #343a40;
+
+}
+.container h3 {
+  margin: 0;
+  text-align: center;
+  margin: 10px 0;
+  font-size: 23px;
+  font-weight: 300;
+}
+.item {
+  overflow: hidden;
+}
+.item p {
+  margin: 0 15px;
+  font-weight: 300;
+}
+.item p a:nth-child(1){
+  float: left;
+}
+.item p a:nth-child(2){
+  float: right;
+}
+.progress {
+  clear:both;
+  border: 1px solid #ffc9c9;
+  width: 400px;
+  margin: 8px 15px;
+  border-radius: 5px;
+}
+.level {
+  height: 10px;
+  margin: 2px 2px;
+  background: linear-gradient(to right, #ef32d9, #89fffd);
+  border-radius: 10px;
+  width: 0;
+  animation: load 1s both;
+}
+.item:last-child{
+  margin-bottom: 8px;
+}
+.item:nth-of-type(1) .level{
+  animation-delay: 0s;
+}
+.item:nth-of-type(2) .level{
+  animation-delay: .2s;
+}
+.item:nth-of-type(3) .level{
+  animation-delay: .4s;
+}
+.item:nth-of-type(4) .level{
+  animation-delay: .6s;
+}
+.item:nth-of-type(5) .level{
+  animation-delay: .8s;
+}
