@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap');
+
+body {
+  font-family: 'Sansita Swashed', cursive;
+  margin: 0;
+  color: rgba(243, 240, 240, 0.925);
+}
+.gallery {
+  list-style: none;
+  height: 100vh;
+  display: flex;
+  margin:0;
+  padding:0;
+}
+.gallery li {
+  border-right: 2.5px solid black;
+  flex:1;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: .5s;
+  text-align: center;
+  position: relative;
+  overflow:hidden;
+}
+.gallery li .content {
+  position:absolute;
+  bottom: -1000px;
+  left:0;
+  background-color: rgb(41, 40, 40);
+  padding: 40px 20px;
+  font-size: 14px;
+}
+.gallery li:hover .content {
+  bottom: 0px;
+  transition: .3s;
+  transition-delay: .5s;
+}
+.gallery li .content::after {
+  content:'';
+  position: absolute;
+  top:-3px;
+  left: 0;
+  background-color: rgb(41, 40, 40);
+  width: 1000px;
+  height: 60px;
+  transform-origin: left bottom;
+  transform: rotate(-2deg);
+}
+.gallery i {
+  width: 20px;
+  height: 20px;
+  border-radius: 8px;
+  color: grey;
+  background-color: rgba(223, 150, 161, 0.849);
+  text-align: center;
+  line-height: 20px;
+  margin-top: 10px;
+  margin-right: 3px;
+}
+.gallery li:nth-child(1){
+  background-image: url('img/artistic-image-01.jpg');
+}
+.gallery li:nth-child(2){
+  background-image: url('img/artistic-image-02.jpg');
+}
+.gallery li:nth-child(3){
+  background-image: url('img/artistic-image-03.jpg');
+}
+.gallery li:nth-child(4){
+  background-image: url('img/artistic-image-04.jpg');
+}
+.gallery li:nth-child(5){
+  border:none;
+  background-image: url('img/artistic-image-05.jpg');
+}
+.gallery:hover li{
+  filter:grayscale(1);
+}
+.gallery li:hover{
+  flex:3;
+  filter:none;
+}

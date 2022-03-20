@@ -66,13 +66,13 @@ a{
 }
 .back{
   width: 100%;
-    height: inherit;
-    line-height: 1.5em;
-    position:absolute;
-    padding: 20px;
-    box-sizing: border-box;
-    opacity: 0;
-    transition: .2s;
+  height: inherit;
+  line-height: 1.5em;
+  position:absolute;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: .2s;
 }
 .back p{
   margin: 3px 8px;
