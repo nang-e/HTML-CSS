@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+body {
+  font-family: 'Roboto Mono', monospace;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: #f8f9fa;
+  font-weight: 700;
+}
+.container {
+  height: 150px;
+  display: flex;
+  align-content: space-evenly;
+  flex-direction: column;
+}
+.container p{
+  margin:0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 30px;
+  position: relative;
+}
+.container p:nth-child(1)::after {
+  content:'';
+  position: absolute;
+  height: 1px;
+  top:90%;
+  left:0;
+  width: 0;
+  background-color: hotpink;
+  transition:.3s;
+}
+.container p:nth-child(1):hover::after {
+  width: 100%;
+}
+.container p:nth-child(2)::after {
+  content:'';
+  position: absolute;
+  height: 1px;
+  top:90%;
+  right:0;
+  width: 0;
+  background-color: hotpink;
+  transition:.3s;
+}
+.container p:nth-child(2):hover::after {
+  width: 100%;
+}
+.container p:nth-child(3)::after {
+  content:'';
+  position: absolute;
+  height: 3px;
+  width: 3px;
+  border-radius: 100%;
+  top:90%;
+  left:0;
+  background-color: hotpink;
+  transition:.3s;
+}
+.container p:nth-child(3):hover::after {
+  left:calc(100% - 3px);
+}
+.container p:nth-child(4)::after {
+  content:'';
+  position: absolute;
+  height: 1px;
+  top:90%;
+  width: 0;
+  right:50%;
+  background-color: hotpink;
+  transition:.3s;
+  transform: translateX(50%);
+}
+.container p:nth-child(4):hover::after {
+  width:100%;
+}
+.container p:nth-child(5)::after {
+  content:'';
+  position: absolute;
+  height: 1px;
+  top:90%;
+  width: 100%;
+  right:50%;
+  background-color: hotpink;
+  transition:.3s;
+  transform: translateX(50%);
+}
+.container p:nth-child(5):hover::after {
+  width:0;
+}

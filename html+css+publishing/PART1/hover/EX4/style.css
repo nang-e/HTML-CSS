@@ -41,7 +41,17 @@ a{
   top: 0;
   z-index: 1;
   box-shadow: 0 0 13px #91a7ff;
-  transition: .2s;
+  transition: .5s;
+}
+.back{
+  width: 100%;
+  height: inherit;
+  line-height: 1.5em;
+  position:absolute;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: .5s;
 }
 .item:hover .front , .back {
   background-color: rgba(186, 200, 255, .7);
@@ -63,16 +73,6 @@ a{
 .front h3{
   margin: 0;
   padding: 0;
-}
-.back{
-  width: 100%;
-  height: inherit;
-  line-height: 1.5em;
-  position:absolute;
-  padding: 20px;
-  box-sizing: border-box;
-  opacity: 0;
-  transition: .2s;
 }
 .back p{
   margin: 3px 8px;
