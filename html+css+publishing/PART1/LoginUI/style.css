@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'LeeSeoyun';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: 'LeeSeoyun';
+  margin: 0;
+}
+a{
+  text-decoration: none;
+  font-size: 14px;
+}
+.container header{
+  height: 50px;
+  border-bottom: 1.5px solid rgba(218, 217, 217, 0.756);;
+}
+.container header a{
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section {
+  background-color: rgba(227, 226, 226, 0.581);
+  height: calc(100vh - 50px);
+  position: relative;
+}
+section .login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.login .login-type a{
+  display: block;
+  height: 45px;
+  width: 270px;
+  margin: 15px 0;
+  line-height: 45px;
+  position: relative;
+  color: #fff;
+  opacity: .85;
+}
+.login .login-type a:nth-of-type(1){
+  background-color: #fff;
+  color: grey;
+}
+.login .login-type a:nth-of-type(2){
+  background-color: rgb(187, 187, 187);
+}
+.login .login-type a:nth-of-type(3){
+  background-color: #2DB400;
+}
+.login .login-type a:nth-of-type(4){
+  background-color: #3b5998;
+}
+.login .login-type a:nth-of-type(5){
+  background-color: #21b468;
+}
+.login .login-type a:hover {
+  opacity: 1;
+}
+.login .login-type img{
+  position: absolute;
+  top:50%;
+  left:0;
+  transform: translateY(-50%);
+  padding: 10px;
+}
+.login-type p {
+  font-size: 12px;
+  position: relative;
+}
+.login-type p::before,
+.login-type p::after {
+  content:'';
+  top:50%;
+  position: absolute;
+  height: 1px;
+  background-color: lightgrey;
+  width: 118px;
+}
+.login-type p::before{
+  left:0;
+
+}
+.login-type p::after{
+  right:0;
+}
+.login-footer {
+  text-align: left;
+}
+.login-footer input {
+  margin: 0;
+}
+.login-footer label{
+  cursor: pointer;
+}
+.login-footer p{
+  text-align: center;
+}
+.login-footer p a{
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  padding-left: 5px;
+}
