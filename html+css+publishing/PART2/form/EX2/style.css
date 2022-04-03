@@ -87,3 +87,11 @@ input[name=form]:hover {
 .loginform input[type=submit]:hover {
   opacity: 1;
 }
+*::placeholder {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  transition: .3s;
+}
+input[name=form]:focus::placeholder{
+  opacity: 0;
+}
