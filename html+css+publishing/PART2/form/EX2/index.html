@@ -3,23 +3,28 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5a9267112e.js" crossorigin="anonymous"></script>
     <title>Part2 form1</title>
   </head>
   <body>
-    <div class="login">
+    <form>
       <div class="loginform">
         <h3>Email</h3>
-        <input type="text" name='email'>
+        <input type="email" name='form' id='email'>
 
         <h3>Password</h3>
-        <input type="text" name='password'>
+        <input type="password" name='form' id='password'>
 
         <div class="logininfo">
-          <span><a href="#none"><input type="checkbox">Keep me logged in</a></span>
+          <span>
+            <label>
+              <input type="checkbox">Keep me logged in
+            </label>
+          </span>
           <a href="#none">Forgot Your Password?</a>
         </div>
-        <input type="button" value="Log in">
+        <input type="submit" value="Log in">
       </div>
-    </div>
+    </form>
   </body>
 </html>
