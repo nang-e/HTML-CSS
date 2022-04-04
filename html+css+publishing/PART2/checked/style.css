@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&display=swap');
+
+body {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 14px;
+}
+.container {
+  height: 333.33px;
+  width: 250px;
+  position: relative;
+  color: white;
+  overflow: hidden;
+  transition: .3s;
+  margin-right: 20px;
+}
+.container .contents {
+  position: absolute;
+  height: inherit;
+  top: 100%;
+  left: 0;
+  text-align: center;
+  padding-top: 160px;
+  transition: .3s;
+}
+.container:hover .contents {
+  top:0;
+}
+.container:hover{
+  transform: translateY(-20px);
+  box-shadow: 0 10px 10px rgba(128, 128, 128, 0.827);
+}
+.container:nth-child(1) .contents{
+  background: linear-gradient(to top, red, transparent);
+}
+.container:nth-child(2) .contents{
+  background: linear-gradient(to top, dodgerblue, transparent);
+}
+.container:nth-child(3) .contents{
+  background: linear-gradient(to top, green, transparent);
+}
+
+.contents h4 {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  margin: 0;
+}
+.contents span {
+  display: block;
+  color: yellow;
+  font-size: 14px;
+}
+.contents .icons i{
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 15px;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  line-height: 20px;
+}
