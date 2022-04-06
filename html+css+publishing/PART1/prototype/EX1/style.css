@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 input {
   display: none;
@@ -8,13 +8,62 @@ input {
 .container {
   width: 300%;
   display: flex;
+  position: absolute;
+  left:0;
+  top:0;
+  transition: .4s;
 }
 .container .tab{
-  border: 1px solid red;
-  width: 33.33333%;
+  width: 33.3333%;
   height: 100vh;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.container .tab:nth-child(1){
+  background-color: pink;
+}
+.container .tab:nth-child(2){
+  background-color: lightskyblue;
+}
+.container .tab:nth-child(3){
+  background-color:palegreen;
+}
+.container .tab h1 {
+  font-size: 62px;
+}
+.container .labelbox {
+  display: flex;
+  height: 3.5px;
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container .labelbox label {
+  display: block;
+  width: 50px;
+  height: inherit;
+  margin: 10px 12px 10px 0;
+  background-color: #000;
+}
+input[id=tab1]:checked ~ .container .labelbox label[for=tab1]{
+  background-color: #fff;
+}
+input[id=tab1]:checked ~ .container{
+  left:0;
+}
+input[id=tab2]:checked ~ .container .labelbox label[for=tab2]{
+  background-color: #fff;
+}
+input[id=tab2]:checked ~ .container{
+  left:-100%;
+}
+input[id=tab3]:checked ~ .container .labelbox label[for=tab3]{
+  background-color: #fff;
+}
+input[id=tab3]:checked ~ .container{
+  left:-200%;
+}
+
