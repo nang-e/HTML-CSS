@@ -48,20 +48,16 @@ input {
   margin: 10px 12px 10px 0;
   background-color: #000;
 }
-input[id=tab1]:checked ~ .container .labelbox label[for=tab1]{
+input[id=tab1]:checked ~ .container .labelbox label[for=tab1],
+input[id=tab2]:checked ~ .container .labelbox label[for=tab2],
+input[id=tab3]:checked ~ .container .labelbox label[for=tab3]{
   background-color: #fff;
 }
 input[id=tab1]:checked ~ .container{
   left:0;
 }
-input[id=tab2]:checked ~ .container .labelbox label[for=tab2]{
-  background-color: #fff;
-}
 input[id=tab2]:checked ~ .container{
   left:-100%;
-}
-input[id=tab3]:checked ~ .container .labelbox label[for=tab3]{
-  background-color: #fff;
 }
 input[id=tab3]:checked ~ .container{
   left:-200%;

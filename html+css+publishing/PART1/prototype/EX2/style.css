@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+body {
+  margin: 0;
+  color: white;
+  font-size: 28px;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+.container input {
+  display: none;
+}
+.contents {
+  height: 100vh;
+  width: 300%;
+  display: flex; 
+  position: relative;
+  top:0;
+  left:0;
+  transition: .3s;
+}
+.contents .content {
+  width: 33.3333%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  transition: .5s;
+}
+.contents .content:nth-child(1){
+  background: url('img/photo-01.jpg') no-repeat center center;
+  background-size: cover;
+}
+.contents .content:nth-child(1)::before{
+  background: linear-gradient(135deg, red,transparent);
+}
+.contents .content:nth-child(2){
+  background: url('img/photo-02.jpg') no-repeat center center;
+  background-size: cover;
+}
+.contents .content:nth-child(2)::before{
+  background: linear-gradient(135deg, yellow,transparent);
+}
+.contents .content:nth-child(3){
+  background: url('img/photo-03.jpg') no-repeat center center;
+  background-size: cover;
+}
+.contents .content:nth-child(3)::before{
+  background: linear-gradient(135deg, blue,transparent);
+}
+.contents .content:nth-child(1)::before,
+.contents .content:nth-child(2)::before,
+.contents .content:nth-child(3)::before {
+  content:'';
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+}
+.contents .content h1{
+  z-index: 1;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  position: absolute;
+  top: -100%;
+  transition: .3s;
+  transition-delay: .5s;
+}
+.taps {
+  width: 100%;
+  height: 30px;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+}
+.taps label{
+  margin-right: 10px;
+}
+.taps label[for=tap3]{
+  margin: 0;
+}
+input[id=tap1]:checked ~ .contents{
+  left:0;
+}
+input[id=tap2]:checked ~ .contents{
+  left:-100%;
+}
+input[id=tap3]:checked ~ .contents{
+  left:-200%;
+}
+input[id=tap1]:checked ~ .contents .content:nth-child(1) h1,
+input[id=tap2]:checked ~ .contents .content:nth-child(2) h1,
+input[id=tap3]:checked ~ .contents .content:nth-child(3) h1{
+  top: 15%;
+}
+input[id=tap1]:checked ~ .taps label[for=tap1],
+input[id=tap2]:checked ~ .taps label[for=tap2],
+input[id=tap3]:checked ~ .taps label[for=tap3]{
+  color:black;
+}
