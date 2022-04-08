@@ -1,0 +1,57 @@
+body{
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+input{
+  display: none;
+}
+.container {
+  height: 330px;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+}
+.contents{
+  height: 300px;
+  width: 300%;
+  display: flex;
+  position: absolute;
+  left:0;
+  transition: .3s;
+}
+.labels {
+  display: flex;
+  height: 17px;
+  width: 100%;
+  position: absolute;
+  bottom: 5px;
+  justify-content: center;
+}
+.labels label{
+  display: block;
+  height: inherit;
+  width: 17px;
+  background-color: lightgrey;
+  margin-right: 7px;
+  border-radius: 50%;
+}
+.labels label:nth-child(3){
+  margin-right: 0;
+}
+input[id=tab1]:checked ~ .contents {
+  left:0;
+}
+input[id=tab2]:checked ~ .contents{
+  left:-100%;
+}
+input[id=tab3]:checked ~ .contents{
+  left:-200%;
+}
+input[id=tab1]:checked ~ .labels label[for=tab1],
+input[id=tab2]:checked ~ .labels label[for=tab2],
+input[id=tab3]:checked ~ .labels label[for=tab3]{
+  background-color: crimson;
+}

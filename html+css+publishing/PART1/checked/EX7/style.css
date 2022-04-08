@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,300&display=swap');
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+input{
+  display: none;
+}
+.container {
+  width: 600px;
+  height: 450px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.container h1{
+  text-align: center;
+  margin-bottom: 30px;
+}
+.contents{
+  width:  300%;
+  height: 300px;
+  display: flex;
+  position: absolute;
+  left: 0;
+  transition: .3s;
+}
+.contents .content{
+  width: 33.3333%;
+  height: inherit;
+}
+.content img{
+  width: 100px;
+  border-radius: 50%;
+}
+.contents .content span:nth-of-type(1){
+  font-weight: bold;
+  display: block;
+  margin: 15px 0 8px 0;
+}
+.contents .content span:nth-of-type(2){
+  color: rgb(255, 187, 0);
+}
+.labels {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  height: 13px;
+}
+.labels label {
+  display: inline-block;
+  width: 13px;
+  height: inherit;
+  background-color: lightgrey;
+  cursor: pointer;
+}
+input[id=tap1]:checked ~ .contents {
+  left:0;
+}
+input[id=tap2]:checked ~ .contents {
+  left:-100%;
+}
+input[id=tap3]:checked ~ .contents {
+  left:-200%;
+}
+input[id=tap1]:checked ~ .labels label[for=tap1],
+input[id=tap2]:checked ~ .labels label[for=tap2],
+input[id=tap3]:checked ~ .labels label[for=tap3]{
+  border-radius: 50%;
+  background-color: grey;
+}
