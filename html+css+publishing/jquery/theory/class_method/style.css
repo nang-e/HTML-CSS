@@ -1,0 +1,36 @@
+body{
+  display: flex;
+  justify-content: center;
+}
+.container{
+  width: 400px;
+  text-align: center;
+}
+a{
+  text-decoration: none;
+  color: #000;
+  width: 100px;
+  display: inline-block;
+  background-color: lightgrey;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.container div{
+  width: 400px;
+  height: 300px;
+  background-color: coral;
+  margin-top: 15px;
+  text-align: center;
+  line-height: 300px;
+  font-size: 36px;
+  color:blanchedalmond;
+  border-radius: 10px;
+  display: none;
+}
+.container div.active{
+  /* .active만 사용하면 안됨! display:none;을 
+  display:block;으로 덮어쓰는 상황이라 앞의 선택자도 동일해야 한다*/
+  display: block;
+}
