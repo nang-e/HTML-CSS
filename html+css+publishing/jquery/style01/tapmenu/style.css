@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,600;1,300&display=swap');
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+  background-color: lightgrey;
+  font-family: 'Montserrat', sans-serif;
+}
+.container{
+  text-align: center;
+  width: 600px;
+  height: 450px;
+  background-color: rgba(255, 255, 255, 0.892);
+  overflow: hidden;
+  position: relative;
+}
+.container h1{
+  margin: 20px 0;
+  padding: 3px;
+  display: inline-block;
+  font-weight: 400;
+}
+.container h1 span{
+  color: crimson;
+}
+.testimonial-pic img{
+  width: 90px;
+  filter: grayscale(.8);
+  padding: 10px 10px;
+  cursor: pointer;
+  transition: .3s;
+}
+.testimonial-pic img.active{
+  border-radius: 50%;
+  filter: none;
+}
+.testimonial{
+  padding: 0 20px;
+  position: absolute;
+  bottom: 5px;
+}
+.testimonial .content{
+  display: none;
+  padding: 0 20px;
+  transition: .3s;
+}
+.testimonial .content.active{
+  display: block;
+}
+.testimonial .content p span{
+  display: block;
+  margin: 15px 0;
+  font-weight: 600;
+}
