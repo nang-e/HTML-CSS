@@ -1,0 +1,48 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+.container{
+  text-align: center;
+}
+.container h1{
+  margin: 0;
+}
+.container h1 span{
+  color: crimson;
+}
+.container span:nth-child(2){
+  width: 400px;
+  height: 1px;
+  display: inline-block;
+  background-color: grey;
+}
+.container .login h3{
+  font-size: 23px;
+}
+.login {
+  border: 3px solid grey;
+  height: 120px;
+  margin-top: 10px;
+  width: 450px;
+}
+.login h3{
+  margin: 15px 0;
+}
+.login input,
+.login button{
+  padding: 10px;
+  outline: none;
+}
+.login button{
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
