@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'LeeSeoyun';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'LeeSeoyun';
+  font-size: 18px;
+}
+.container{
+  padding: 20px 10px;
+  display: flex;
+  background-color: grey;
+  border-radius: 10px;
+  height: 20px;
+}
+.star, .text{
+  width: 130px;
+  text-align: left;
+  height: inherit;
+  line-height: 20px;
+}
+.text{
+  width: 160px;
+  font-size: 20px;
+  text-align: center;
+}
+.star i{
+  cursor: pointer;
+}
+.star i.active{
+  color: yellow;
+  text-shadow: 0 0 3px yellowgreen;
+}
