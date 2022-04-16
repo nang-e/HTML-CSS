@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Raleway:wght@300&display=swap');
+body{
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgba(231, 231, 231, 0.88);
+}
+h1,p{
+  margin: 0;
+}
+.list{
+  padding: 0;
+  padding-left: 10px;
+  margin: 0;
+}
+.list li{
+  list-style: none;
+  display: inline-block;
+  border: 1px solid rgba(162, 162, 162, 0.305);
+  border-right: none;
+  border-bottom: none;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+.list li:nth-child(5){
+  border-right: 1px solid rgba(162, 162, 162, 0.305);
+}
+.content{
+  width: 750px;
+  height: 300px;
+  position: relative;
+  box-shadow: 0 5px 5px rgba(128, 128, 128, 0.506);
+  background-color: #fff;
+}
+.content>div img{
+  width: 150px;
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-40%);
+}
+.content div .text{
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  transform: translateY(-30%);
+  text-align: center;
+}
+.content div .text p{
+  margin-top: 20px;
+  width: 500px;
+  text-align: left;
+}
+.list li.active{
+  background-color: #fff;
+  border-top: 3px solid crimson;
+}
