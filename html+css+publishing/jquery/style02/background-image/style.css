@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Raleway:wght@300&display=swap');
+body{
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  background-image: url('img/portrait-initial.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: .5s;
+}
+.menus ul{
+  padding: 0;
+}
+.menus li{
+  color: #fff;
+  display: block;
+  position: relative;
+  font-size: 36px;
+  font-weight: 500;
+}
+.menus li::before{
+  content: attr(data-text);
+  position: absolute;
+  color: yellowgreen;
+  top: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  transition: .5s;
+}
+.menus li.active::before{
+  width: 100%;
+}
