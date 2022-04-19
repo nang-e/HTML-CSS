@@ -10,13 +10,14 @@ body{
   font-size: 15px;
 }
 .item{
-  border: 1px solid black;
   position: relative;
+  box-shadow: 0 3px 7px grey;
   border-radius: 10px;
   overflow: hidden;
 }
 img{
   vertical-align: middle;
+  transition: .5s;
 }
 .content{
   position: absolute;
@@ -27,6 +28,9 @@ img{
   transition: .3s;
   padding: 0 20px;
   box-sizing: border-box;
+}
+.item:hover img{
+  filter:blur(2px);
 }
 .item:hover .content{
   bottom: 0;
@@ -52,13 +56,19 @@ img{
   font-weight: bold;
   padding-top: 10px;
 }
+.sizes{
+  position: relative;
+}
 .sizes i{
-  float: right;
+  position: absolute;
+  top: 10px;
+  right: 0;
   font-size: 20px;
   color: rgb(156, 156, 156);
   cursor: pointer;
 }
-.sizes i.active{
+.sizes i:nth-of-type(2){
+  display: none;
   color:  crimson;
 }
 .sizes span{
@@ -118,4 +128,9 @@ button{
   border: 1px solid grey;
   border-radius: 3px;
   cursor: pointer;
+  transition: .3s;
+}
+button:hover{
+  background-color: #000;
+  color: #fff;
 }

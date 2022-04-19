@@ -3,5 +3,5 @@ $('.colors span, .sizes span').click(function(){
   $(this).siblings().removeClass('active')
 })
 $('.sizes i').click(function(){
-  $(this).toggleClass('active')
+  $('.sizes i:nth-of-type(2)').toggle()
 })
