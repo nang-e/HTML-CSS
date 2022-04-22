@@ -6,88 +6,54 @@
 }
 body{
   font-family: 'HallymGothic-Regular';
+  margin: 0;
+  color: #222;
+}
+a{
+  text-decoration: none;
+  color: #222;
+}
+
+/* Layout */
+section{
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
 }
-a{
-  text-decoration: none;
-  color: black;
+article{
+  border: 1px solid red;
+  width: 750px;
+  height: 450px;
 }
-.container{
-  width: 700px;
-  height: 500px;
+.heading{
+  border: 1px solid black;
+  height: 100px;
   text-align: center;
 }
-.container h3{
+.heading span{
   color: crimson;
+  font-size: 18px;
 }
-.container h1{
+.heading h1{
+  font-size: 24px;
   font-weight: normal;
-  font-size: 25px;
 }
-.container h1 span{
-  font-weight: bold;
-  background-color:lightcoral;
-  border-radius: 5px;
-  padding: 1px 3px;
+.heading h1 em{
+  border: 1px solid red;
+  font-style: normal;
 }
-.item{
-  display: flex;
-  align-items: center;
+.heading h1 em::after{
+  content:'';
+  background-image: url('img/logo-kakao.png');
+}
+.content{}
+.content div{
+  border: 1px solid blue;
   height: 350px;
-  position: relative;
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
 }
-.container .contents{
-  width: 420px;
-  margin-top: 10px;
-  justify-content: center;
-}
-.container .content{
-  width: 410px;
-  height: 35px;
-  font-size: 14px;
-  padding: 5px 0;
-  overflow: hidden;
-  transition: .3s;
-}
-.container .content.active{
-  overflow: visible;
-  height: max-content;
-}
-.container img{
-  position: absolute;
-  right: -10px;
-  width: 300px;
-  bottom: 40px;
-  transition: .3s;
-}
-.content a{
-  display: block;
-  height: 30px;
-  line-height: 30px;
-  width: 380px;
-  text-align: left;
-  padding: 3px 10px;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
-  position: relative;
-  transition: .5s;
-  z-index: 1;
-}
-.content a::after{
-  content:'›';
-  position: absolute;
-  right: 10px;
-}
-.content a:hover,
-.content a.active {
-  background-color:midnightblue;
-  color: #fff;
-}
-.content p{
-  margin: 15px;
-  text-align: left;
-  transition: .5s;
-}
+.accordian{}
+.image{}
