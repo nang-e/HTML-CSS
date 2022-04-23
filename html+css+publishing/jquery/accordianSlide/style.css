@@ -22,38 +22,70 @@ section{
   height: 100vh;
 }
 article{
-  border: 1px solid red;
   width: 750px;
   height: 450px;
 }
 .heading{
-  border: 1px solid black;
   height: 100px;
   text-align: center;
 }
 .heading span{
   color: crimson;
-  font-size: 18px;
+  font-size: 20px;
 }
 .heading h1{
   font-size: 24px;
   font-weight: normal;
 }
 .heading h1 em{
-  border: 1px solid red;
   font-style: normal;
+  position: relative;
 }
 .heading h1 em::after{
-  content:'';
-  background-image: url('img/logo-kakao.png');
+  content: url(img/logo-kakao.png);
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  transform: scale(.8);
 }
-.content{}
-.content div{
-  border: 1px solid blue;
-  height: 350px;
-  float: left;
+.content{
+  position: relative;
+}
+.content .accordian{
   width: 50%;
   box-sizing: border-box;
+  padding: 10px 0;
 }
-.accordian{}
-.image{}
+.accordian a.title {
+  border: 1px solid lightgrey;
+  display: block;
+  border-radius: 3px;
+  padding: 7px 10px;
+  transition: .3s;
+}
+.accordian a.title:hover ,
+.accordian a.title.active{
+  background-color: navy;
+  color: white;
+}
+.accordian a.title::after{
+  content: '》';
+  float: right;
+  padding-right: 3px;
+  transition: .3s;
+}
+.accordian a.title.active::after{
+  transform:rotate(90deg);
+  color: rgb(255, 166, 0);
+}
+.accordian .description{
+  padding: 13px 8px;
+  font-size: 14px;
+  display: none;
+}
+img{
+  width: 50%;
+  position: absolute;
+  right: -20px;
+  top:0;
+}
