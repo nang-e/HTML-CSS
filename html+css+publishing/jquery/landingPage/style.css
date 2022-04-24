@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Orbitron&family=Raleway:wght@300&display=swap');
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  height: 100vh;
+  color: #000;
+  cursor:default;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+.video-frame video{
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%; 
+  z-index: -1;
+}
+.video-frame::after {
+  content:'';
+  background: linear-gradient(to right, white, red);
+  display:block;
+}
+.logo{
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  cursor: pointer;
+}
+.logo img{
+  width: 70%;
+}
+.description{
+  position: absolute;
+  left: 30px;
+  bottom: 50px;
+  color: #fff;
+}
+.description em{
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+}
+.description em span{
+  display: block;
+  color: crimson;
+}
+.description p{
+  width: 400px;
+}
+.description a{
+  display: inline-block;
+  border: 1px solid #fff;
+  padding: 5px 8px;
+  border-radius: 15px;
+  margin-top: 3px;
+  margin-right: 12px;
+}
+.anniversary{
+  position: absolute;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: .2em;
+  line-height: 2.9em;
+  bottom: 70px;
+  right: 30px;
+}
+.anniversary span{
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 90px;
+}
+.anniversary{}
