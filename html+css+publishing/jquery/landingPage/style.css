@@ -9,7 +9,7 @@ body{
 }
 a{
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 .video-frame video{
   position: fixed;
@@ -19,23 +19,29 @@ a{
 }
 .video-frame::after {
   content:'';
-  background: linear-gradient(to right, white, red);
-  display:block;
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(220, 20, 60, 0.934));
 }
 .logo{
   position: absolute;
   left: 30px;
   top: 30px;
   cursor: pointer;
+  z-index: 1;
 }
 .logo img{
-  width: 70%;
+  width: 80%;
 }
 .description{
   position: absolute;
   left: 30px;
   bottom: 50px;
   color: #fff;
+  animation: description-ani .8s .5s linear both;
 }
 .description em{
   font-size: 36px;
@@ -52,10 +58,26 @@ a{
 .description a{
   display: inline-block;
   border: 1px solid #fff;
-  padding: 5px 8px;
+  padding: 7px 12px;
+  font-size: 14px;
   border-radius: 15px;
   margin-top: 3px;
   margin-right: 12px;
+  transition: .3s;
+}
+.description a:nth-of-type(1){
+  background-color: #fff;
+  color: #000;
+}
+.description a:nth-of-type(1):hover{
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+.description a:nth-of-type(2):hover{
+  color: transparent;
+  background-color: #fff;
+  mix-blend-mode:screen;
 }
 .anniversary{
   position: absolute;
@@ -65,10 +87,111 @@ a{
   line-height: 2.9em;
   bottom: 70px;
   right: 30px;
+  color: #fff;
+  animation: anniversary-ani 1s .5s linear both;
+  z-index: 1;
 }
 .anniversary span{
   display: block;
   font-family: 'Orbitron', sans-serif;
   font-size: 90px;
 }
-.anniversary{}
+.menu-bar{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 20px;
+  width: 25px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu-bar span{
+  display: block;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.784);
+  margin-bottom: 5px;
+  transition: .3s;
+}
+.menu-bar span:nth-child(1).active{
+  transform: rotate(45deg) scaleX(120%) translateX(4px) translateY(6px);
+  background-color: rgb(255, 255, 255);
+}
+
+.menu-bar span:nth-child(2).active{
+  opacity: 0;
+}
+.menu-bar span:nth-child(3).active{
+  background-color: rgb(255, 255, 255);
+  transform: rotate(-45deg) scaleX(120%) translateX(4px) translateY(-6px);
+}
+.menu{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+.menus{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.menus a{
+  font-size: 50px;
+  display: block;
+  padding-bottom: 10px;
+  transition: .2s;
+  animation: menus 1s linear both; 
+}
+@keyframes menus {
+  0%{
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.menus a:nth-child(1){
+  animation-delay: .1s;
+}
+.menus a:nth-child(2){
+  animation-delay: .25s; 
+}
+.menus a:nth-child(3){
+  animation-delay: .4s;
+}
+.menus a:nth-child(4){
+  animation-delay: .55s;
+}
+.menus a:nth-child(5){
+  animation-delay: .7s;
+}
+.menu a:hover{
+  color: crimson;
+}
+.menu.active{
+  opacity: 1;
+}
+@keyframes description-ani {
+  0%{
+    opacity: 0;
+    left: -10%;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes anniversary-ani {
+  0%{
+    opacity: 0;
+    right: -10%;
+  }
+  100%{
+    opacity: 1;
+  }
+}
